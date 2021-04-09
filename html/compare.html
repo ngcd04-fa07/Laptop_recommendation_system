@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Compare</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <style>
+            body{
+                              
+                font: Helvetica;
+                background: lightskyblue;
+            }
+            input{
+                width: 90%;
+                height: 40px;
+                border: transparent;
+                border-radius: 5px;
+                padding: 3%;
+            }
+            img{
+                border-radius: 10px;
+            }
+           
+            button{
+                width:30%; height: 90%;align-content: center;margin:3%;
+                padding: 1%;
+                border: transparent;
+                background: #ccffcc;
+                color: black;
+                border-radius: 10px; 
+            }
+            button .active{
+                border: transparent;
+            }
+        </style>
+    </head>
+    <body>
+        <center>  
+        <div class="col-md-10 col-md-offset-1" style="margin-top:2%;margin-bottom: 10%;">
+		<div style="align-content: right;"><a href="..\index.html">Go back</a></div>
+            <h2 style="font-family:Lucida Sans Unicode, Lucida Grande, sans-serif">COMPARE TWO LAPTOPS</h2>
+            <table width="100%" style="margin-top:2%;align-content: center;">
+                <tr style="height:50px;text-align: center;align-content: center">
+                    <td width="45%;" ><input type="text" placeholder="Model 1" id="e1"/></td>
+                    <td width="10%"><h1 style="font-family:Lucida Sans Unicode, Lucida Grande, sans-serif;text-align: center;">VS</h1></td>
+                    <td width="45%;" ><input type="text" placeholder="Model 2" id="e2"/></td>
+                </tr>
+            </table>
+            <center><button type="button" name="COMPARE" onclick="compare();f1();f2();f3();">COMPARE</button></center>
+            <script>
+                      function compare(){
+                          document.getElementById('comp').style.visibility="visible";
+			var e1=document.getElementById('e1').value;
+			var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var x = this.responseText;
+		var y=x.split("^"); 
+		document.getElementById('l1').innerHTML=y[0];
+		document.getElementById('l2').innerHTML=y[1];
+		document.getElementById('l3').innerHTML=y[2];
+		document.getElementById('l4').innerHTML=y[3];
+		document.getElementById('l5').innerHTML=y[4];
+		document.getElementById('l13').innerHTML=y[5];
+		document.getElementById('l14').innerHTML=y[6];
+		document.getElementById('l15').innerHTML=y[7];
+            }
+        };
+        xmlhttp.open("GET", "comp.php?q=" + e1, true);
+        xmlhttp.send();
+                      }
+	function f2(){
+var e2=document.getElementById('e2').value;
+var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var x = this.responseText;
+		var y=x.split("^"); 
+		document.getElementById('l7').innerHTML=y[0];
+		document.getElementById('l8').innerHTML=y[1];
+		document.getElementById('l9').innerHTML=y[2];
+		document.getElementById('l10').innerHTML=y[3];
+		document.getElementById('l11').innerHTML=y[4];
+		document.getElementById('l12').innerHTML=y[5];
+		document.getElementById('l16').innerHTML=y[6];
+		document.getElementById('l17').innerHTML=y[7];
+            }
+        };
+        xmlhttp.open("GET", "comp.php?q=" + e2, true);
+        xmlhttp.send();
+}
+function f1(){
+var e1=document.getElementById('e1').value;
+var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+		document.getElementById('lap1').src= this.responseText;
+}
+        };
+        xmlhttp.open("GET", "image.php?q=" + e1, true);
+        xmlhttp.send();
+}
+function f3(){
+var e2=document.getElementById('e2').value;
+var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById('lap2').src= this.responseText;
+}
+        };
+        xmlhttp.open("GET", "image.php?q=" + e2, true);
+        xmlhttp.send();
+}
+            </script>
+                <table width="100%" id="comp" style="visibility:hidden;padding: 2%;" >
+                <tr style="height: 400px;">
+                    <td width="50%" id="u1"><img src="" alt="image/laptop3.jpg" style="height:350px;width: 500px;" id="lap1"/></td>
+                    <td width="50%"><img src="" alt="image/laptop4.jpg" style="height:350px;width: 500px;" id="lap2"/></td>
+                </tr>
+                <tr style="height: 200px;font-size: 18px;">
+                    <td style="padding-left: 2%"><h3>SPECIFICATION</h3><br>
+                        BRAND : <div id="l1"></div><br>
+                        PRICE : <div id="l2"></div><br>
+                        PROCESSOR :<div id="l3"></div><br>
+                        RAM :<div id="l4"></div><br>
+                        OS : <div id="l5"></div><br>
+                        STORAGE :<div id="l13"></div><br>
+			DISPLAY :<div id="l14"></div><br>
+			RATING :<div id="l15"></div><br>
+                    </td>
+                    <td style="padding-left: 2%"><h3>SPECIFICATION</h3><br>
+                        BRAND : <div id="l7"></div><br>
+                        PRICE : <div id="l8"></div><br>
+                        PROCESSOR :<div id="l9"></div><br>
+                        RAM :<div id="l10"></div><br>
+                        OS :<div id="l11"></div><br>
+                        STORAGE :<div id="l12"></div><br>
+			DISPLAY :<div id="l16"></div><br>
+			RATING :<div id="l17"></div><br>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </center>
+    </body>
+</html>

@@ -1,0 +1,125 @@
+body{width: 100%;
+overflow-x: hidden;
+overflow-y: auto;
+background: black;color: white;
+}
+.sub{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-bottom:  5%;
+    border-top: lightgray thick solid;
+    border-bottom:  lightgray thick solid;
+    border-width: 5px;
+    background: rgba(250,230,21,0.4);
+}
+/*header*/
+#header{
+    color: red;
+    background: black;
+    height: 60px;
+    border-bottom: thick white;
+}
+#header .logo {
+    font-family: 'Pacifico', cursive;
+    display: inline-block;
+    height: inherit;
+    line-height: inherit;
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    color: #e5474b;
+    font-size: 30px;
+    text-transform: none;
+    font-weight: normal;
+    padding: 0;
+}
+#header .logo:hover {
+	color: rgba(229, 71, 75, 0.75);
+}#header a {
+        display: inline-block;
+        padding: 15px 5%;
+	color: #ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 16px;
+		}
+#header a:hover {
+	color: rgba(255, 255, 255, 0.75);
+}
+#header a:last-child {
+	padding-right: 0em;
+}
+/*slideshow*/
+
+* {box-sizing: border-box;}
+.mySlides {
+    display: none;
+    height: 90%;
+    width: 75%;
+    border: thick double white;
+}
+img {
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+}
+
+.slideshow-container {
+  width:100%;
+  height: 80%;
+  position: relative;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+.text {
+  color: #f2f2f2;
+  font-size: 20px;
+  margin-top:  15px ;
+  margin-bottom:   15px ;
+  width: 100%;
+  text-align: center;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.thumbnail{
+    background: black;
+}
+.caption{
+        color: blue;
+}
+.box{
+    height: 430px;
+    border-left: thick solid #ff6666;
+    border-width: 10px;
+    margin-top:3%;
+}
+.preference {
+    border: white thin double;
+    margin-top:  3%;
+    padding: 2%;
+    color: white;
+
+}

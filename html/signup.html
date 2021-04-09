@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign up</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <style>
+            body{
+                width: 100%;
+                background-image: url("image/login.png");
+                background-position: top;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            #login_box{
+                margin-top: 50px;
+               font-size: 16px;
+                color: white;
+                background: rgba(0,0,0,0.4);
+                border-left: solid white thin;
+                border-width: 4px;
+                padding-bottom: 30px;
+            }
+            .input_style{
+                width: 85%;
+                height: 30px;
+                padding: 10px;
+                margin: 15px;
+                color: black;
+                background: white;
+                border: thick black;
+                border-radius: 2px;
+            }
+            input button{
+                background-color: greenyellow;
+                width: 70%;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        <div id="login_box" class="col-xs-5 col-xs-offset-1">
+            <div>
+                <h2 style="margin-top:30px;font-weight:700;">SIGN UP</h2>
+                <hr style="width: 80%;background: blue">
+                <form id = "reg-form">
+                    <input type="text" name="fname" placeholder="First Name" class="input_style" style="width:40%;" required />
+                    <input type="text" name="lname" placeholder="Last Name" class="input_style"  style="width:40%;" required />
+                    <input type="email" name="email" placeholder='Email Id' class="input_style" required>
+                    <input type="tel" name="mob" placeholder="Contact info" class="input_style" style="width:40%;" required>
+                    <input type='date' name="dob" class="input_style" style="width:40%;" required>
+                    <div style="margin-top:10px;">
+                        GENDER : <input type="radio" name="gen" value="Female" style="padding:5px 10px; margin: 5px 15px;" checked="">F
+                    <input type="radio" name="gen" value="Male" style="padding:5px 10px;margin: 5px 15px;">M
+                    <input type="radio" name="gen" value="Others"  style="padding:5px 10px;margin: 5px 15px;" >O</div>
+                    <hr style="width: 80%;">
+                    <input type="text" name="id" placeholder="User Name" class="input_style" required/>
+                    <input type="password" name="pass" placeholder="Password"  class="input_style" required>
+                    <input type="password" name="cpass" placeholder="Confirm Password"  class="input_style" required>
+                        <hr style="width: 80%;">
+                    <input type = "submit" id = "signup" value = "Sign Up" name= "SIGN UP" class="input_style" style="width: 50%;border: thin solid blue;color: blue;margin-bottom: 10px;height: 40px;font-size: 18px;font-weight: 400;">
+		    <br><br><a href="login.html">Go to Login Page</a>
+                </form>
+            </div>
+        </div>
+        <div id="response" style="font-size: 30px; font-weight: 600;">
+
+        </div>
+	
+        </center>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="../js/register.js"></script>
+    </body>
+</html>

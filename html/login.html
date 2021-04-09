@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link href="../bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>        
+<style>
+            body{
+                width: 100%;
+                height: 100%;
+                background-image: url("image/login.png");
+                background-position: top;
+                background-repeat: no-repeat;
+                background-size: cover;
+               
+            }
+            #login_box{
+                top: 150px;
+               font-size: 20px;
+               color: white;
+                background: rgba(0,0,0,0.4);
+                border-left: solid white thin;
+                border-width: 7px;
+                height: 420px;
+             
+            }
+           .input_style{
+                width: 85%;
+                height: 30px;
+                padding: 10px;
+                margin: 15px;
+                color: black;
+                background: white;
+                border: thick black;
+                border-radius: 2px;
+            }
+            
+            input button{
+                background-color: greenyellow;
+                width: 70%;
+            }
+           
+            #forgot{width: 70%;border:thin solid red;color: red;margin-bottom: 10px;height: 40px;font-size: 14px;font-weight: 400;border-radius: 5px;}
+        </style>
+    </head>
+    <body>
+        <center id="bg">
+        <div id="login_box" class="col-xs-4 col-xs-offset-1">
+            <div >
+                <h2 style="margin-top:30px;font-weight: 700;">LOGIN</h2>
+                <hr style="width: 80%;" color="blue">
+                <form  id="login">
+                    <input type="text" id = "id" name="id" placeholder="Username" class="input_style">
+                    <input type="password" name="pass" id = "pass" placeholder="Password" class="input_style">
+                    <hr style="width: 80%;background: blue">
+                    <input type = "submit" name="login" id="login" value = "LOGIN" class="input_style" style="width: 60%;border:thin solid blue;color: blue;margin-bottom: 10px;height: 40px;font-size: 16px;font-weight: 400;border-radius: 5px;">
+             
+                <button name="forgot_pass" class="input_style" id="forgot" >FORGOT PASSWORD</button>
+<br><a style="color:aqua;" href="signup.html">Don't have an account,yet?Signup!</a>            
+</form>
+            <br>
+            </div>
+           
+        </div>
+        <div id="response" style = "font-size: 30px; color: red;">
+
+        </div>
+        </center>
+        <script src="../js/login.js"></script>
+    </body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Homepage</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <link href="../css/main.css" rel="stylesheet" type="text/css"/>
+        
+        <style>
+            
+.dropbtn {
+  background: black;
+  color: white;
+  font-size: 14px;
+  border: none;
+}
+
+.dropdown {
+    margin-left: 10%;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:black;
+  color: white;
+  width: 180px;
+  z-index: 1;
+}
+.dropdown-content a {
+        width: 100%;
+  text-decoration: none;
+  display: block;
+}
+
+.dropbtn {
+  background-color: black;
+  color: white;
+}
+
+.dropdown-content a:hover {
+    border: thin solid white
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  color: black;
+}
+#search_bar{
+    width: 45%;
+    border: none;
+    background: black;
+    color: white;
+    border-bottom: white solid thin;
+}
+#search_bar .input .active .open{
+    text-decoration: none;
+     border: none;
+    background: black;
+    color: white;
+    border-bottom: white solid thin;
+    padding-right: 10%;
+}
+.dot{
+    visibility: hidden;
+}
+.mySlides {
+    border: none;
+    border-bottom: thistle solid thin;
+    border-top: thistle solid thin;
+}
+input
+{
+    margin: 1%;
+    padding-right:4%;
+}
+input .radio{
+    padding-right: 2%;
+    margin-right: 1%;
+}
+tr{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+table{
+        text-align:center; 
+        margin-bottom:5%; 
+        padding: 5%; 
+        background-color: rgba(0,0,0,0.4);
+        border: transparent;
+}
+    tr{
+  height:50px;
+ }
+ tr:nth-child(even) 
+ {
+     background-color:#e2e1e1;
+     color: black;
+ }
+ td{
+     text-align:left;
+     padding-left: 1%;
+ }
+
+ #search_element,#recommend_element {
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     grid-gap: 20px;
+     color: black;
+     padding: 30px;
+ }
+
+ .box {
+     padding: 20px;
+     font-size: 15px;
+     width: 400px;
+     height: 320px;
+ }
+
+</style>
+       
+    </head>
+    <body>
+        
+        <header id="header" class="container-fluid">
+            <div class="container">
+                <a class="col-sm-offset-1 logo" href="..\index.html"><i>Laptop</i></a>
+		<nav id="nav" class="col-sm-offset-6">
+                    <span class="glyphicon glyphicon-search" style='background:black;color: white;'></span>
+                    <input  type="text" id="search_bar"/>
+                    <button id = "search_btn" class = "btn btn-light">Search</button>
+                    <div class="dropdown">
+                        <button class="dropbtn"><a href="#">USERNAME</a></button>
+                        <div class="dropdown-content">
+                            <a href="#preference">PREFERENCE</a>
+                            <a href="#recommend_element">DETAILS</a>
+                            <a href="..\index.html">SIGN OUT</a>
+                            <a href="compare.html">COMPARE</a>
+                        </div>
+                    </div>
+                    
+                    <span class="glyphicon glyphicon-user" style="margin-left: 20px;color: white;"></span>
+		</nav>
+            </div>
+        </header>
+         <script>
+              function dd(n){
+                                document.getElementById().style.visibility='visible';
+                                }
+        </script>
+        
+         <center>
+        <div class="container-fluid slideshow-container" style="background: black;height: 600px; padding-top: 30px;">
+                <div class="mySlides">
+                    <img src="image/laptop1.jpg" style="width:100%; height:100%" alt=" "/>
+                    <p class="text"><i>Fiery deals</i></p>
+                </div>
+                <div class="mySlides ">
+                    <img src="image/laptop2.jpg" style="width:100%; height:100%" alt=" "/>
+                    <p class="text"><i>Get yourself a MAC book</i></p>
+                </div>
+                <div class="mySlides ">
+                    <img src="image/laptop3.jpg" style="width:100%; height:100%" alt=" "/>
+                    <p class="text"><i>How about a gaming laptop</i></p>
+                </div>
+                <div class="mySlides ">
+                    <img src="image/laptop4.jpg" style="width:100%; height:100%" alt=" "/>
+                    <p class="text"><i>Get yourself a MAC book</i></p>
+                </div>
+                <div class="mySlides ">
+                    <img src="image/laptop5.jpg" style="width:100%; height:100%" alt=" "/>
+                    <p class="text"><i>Coder special series</i></p>
+                </div>
+                <div class="mySlides ">
+                    <img src="image/laptop6.jpg" style="width:100%; height:100%" alt=" "/>
+                    <p class="text"><i>Get yourself a MAC book</i></p>
+                </div>
+            <br>
+            <br>
+            <div style="text-align:center">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+            </div>
+        </div>
+        <div id="search_element">
+
+        </div>
+    </center>
+             <script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1;}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); 
+}
+</script>
+<center>
+
+<div class='container preference' id='preference'> 
+    <h3>Fill out your preferences</h3>
+    <hr>
+    <form>
+    <table width="100%" style="font-size:16px;" border="1" >
+        <tr>
+            <td width="30%" style="text-align:right;padding-right: 5%;">BRAND :</td>
+            <td width="12%"><input type="radio" value="DELL" name="brand">   Dell</td>
+            <td width="12%"><input type="radio" value="HP" name="brand">   HP</td>
+            <td width="12%"><input type="radio" value="Lenovo" name="brand">   Lenovo</td>
+            <td width="12%"><input type="radio" value="Apple" name="brand">   Apple</td>
+            <td width="12%"> <input type="radio" value="Asus" name="brand">   Asus</td>
+            <td width="10%"> <input type="radio" value="Acer" name="brand">  Others</td>
+        </tr>
+        <tr>
+            <td width="30%" style="text-align:right;padding-right: 5%;">OS :</td>
+            <td ><input type="radio" value="Windows" name="os">   Windows </td>
+            <td><input type="radio" value="Linux" name="os">   Linux</td>
+            <td ><input type="radio" value="Mac" name="os">   Mac</td>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td style="text-align:right;padding-right: 5%;">Minimum Price : </td>
+            <td colspan="6"><input type="range" id = "minprice" min="10000" max="50000" style="width:90%;margin-left: 3%;" onchange = min_slider(this.value)></td>
+        </tr>
+        <tr>
+            <td style="text-align:right;padding-right: 5%;">Maximum Price : </td>
+            <td colspan="6"><input type="range" id = "maxprice" min="50000" max="200000" style="width:90%;margin-left: 3%;" onchange = max_slider(this.value)></td>
+        </tr>
+        <!-- <tr>
+            <td style="text-align:right;padding-right: 5%;">Core :</td>
+            <td><input type="radio" value="i9">   i9</td>
+            <td><input type="radio" value="i7">   i7</td>
+            <td><input type="radio" value="i5">   i5</td>
+            <td><input type="radio" value="i3">   i3</td>
+            <td><input type="radio" value="Celeron">   Celeron</td>
+            <td><input type="radio" value="pentium">   Pentium</td>
+        </tr> -->
+        <!-- <tr>
+            <td style="text-align:right;padding-right: 5%;">GPU :</td>
+            <td><input type="radio" value="Radeon RX Vega M GL" name="gpu">   Radeon</td>
+             <td colspan="2"><input type="radio" value="Intel HD 630">   Intel HD 630</td>
+            <td><input type="radio" value="HD Graphics" name="gpu">   HD Graphics</td>
+            <td colspan="2"><input type="radio" value="Iris Pro P630" name="gpu">   Iris Pro P630</td>
+        </tr> -->
+        <tr>
+            <td style="text-align:right;padding-right: 5%;">Display configuration :</td>
+            <td><input type="radio" value="18.4" name="display">   18.4"</td>
+            <td><input type="radio" value="17.3" name="display">   17.3"</td>
+            <td><input type="radio" value="15.6" name="display">   15.6"</td>
+            <td><input type="radio" value="14.0" name="display">   14.0"</td>
+            <td><input type="radio" value="13.3" name="display">   13.3"</td>
+            <td><input type="radio" value="others" name="display">   others<td>
+        </tr>
+        <!-- <tr>
+            <td style="text-align:right;padding-right: 5%;">Screen resolution:</td>
+            <td><input type="radio" value="1366 X 768" name="screen">   HD</td>
+            <td><input type="radio" value="1920 X 1080" name="screen">   FULL HD</td>
+            <td><input type="radio" value="3200 X 1800" name="screen">   QHD+3K</td>
+            <td><input type="radio" value="3840 X 2160" name="screen">   UHD 4K</td>
+        </tr> -->
+        <tr>
+            <td style="text-align:right;padding-right: 5%;">RAM :</td>
+            <td><input type="radio" value="2" name="ram">   2 GB</td>
+            <td><input type="radio" value="4" name="ram">   4 GB</td>
+            <td><input type="radio" value="8" name="ram">   8 GB</td>
+            <td><input type="radio" value="12" name="ram">   12 GB</td>
+            <td><input type="radio" value="16" name="ram">   16 GB</td>
+            <td><input type="radio" value="24" name="ram">   24 GB</td>
+        </tr>
+    </table>   
+    </form>
+    <button  style="width: 30%;height: 40px;background-color: #20c7f2;font-size: 18px;padding: 5px;" id = "prefer">SEARCH</button>
+  <div style = "margin-top: 20px; font-size:30px" id="minview">
+
+    </div>
+    <div style = "margin-top: 20px; font-size:30px" id="maxview">
+
+    </div>  
+</div>
+<div id="recommend_element">
+
+</div>
+</center>
+<div id="laptop_display" class="container" style="height:600px;margin-top: 5%;visibility: hidden; ">
+    <div class="col-sm-5">
+    <img src="image/lenovo.jpg" style="width:90%;height: 80%;padding-top: 3%;" alt=""/>
+    </div>
+    <div class="col-sm-offset-5" style="font-size: 18px;">
+        <h2>Lenovo Ideapad Slim 3i</h2><hr>
+       <ul type="square">
+                        <li>10th Gen Intel Core i5 (i5-10210U)</li>
+                        <li>4 Cores | 6MB Cache</li>
+                        <li>Pre-Loaded Windows 10 Home</li>
+                        <li>8GB RAM DDR4-2666 (4GB+4GB) Upgradable up to 12GB | 1TB HDD</li>
+                        <li>Display: 15.6" Full HD (1920x1080) | Anti-Glare</li>
+                        <li>Graphics: NVIDIA GeForce MX130 2GB GDDR5</li>
+                        <li>Design: 1.99 cm Thin and 1.7 kg Light | Narrow Bezel</li>
+                        <li>Battery Life: 5 Hours | Rapid Charge (Up to 80% in 1 Hour)</li>
+        </ul>
+    </div>
+</div>
+        <script src="../js/homepage.js"></script>
+    </body>
+</html>
