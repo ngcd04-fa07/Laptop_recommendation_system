@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Laptop </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+	<link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+        <link href="main.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+    <body>
+        
+        <header id="header" class="container-fluid">
+            <div class="container">
+                <a class="col-sm-offset-1 logo" href="index.html"><i>Laptop</i></a>
+		<nav id="nav" class="col-sm-offset-7">
+                    <a href="#">Home</a>
+                    <a href="html/login.html">Login</a>
+                    <a href="html/signup.html">Sign Up</a>
+                    <a href="html/compare.html">Compare</a>
+		</nav>
+            </div>
+        </header>
+    <center>
+        <div class="container-fluid slideshow-container" style="background: black;height: 550px; padding-top: 50px;">
+                <div class="mySlides">
+                    <img src="image/laptop1.jpg" style="width:100%; height:100%" alt=" "/>
+                </div>
+                <div class="mySlides ">
+                    <img src="image/laptop2.jpg" style="width:100%; height:100%" alt=" "/>
+                </div>
+                <div class="mySlides ">
+                    <img src="image/laptop3.jpg" style="width:100%; height:100%" alt=" "/>
+                </div>
+                <div class="mySlides ">
+                    <img src="image/laptop4.jpg" style="width:100%; height:100%" alt=" "/>
+                </div>
+                <div class="mySlides ">
+                    <img src="image/laptop5.jpg" style="width:100%; height:100%" alt=" "/>
+                </div>
+                <div class="mySlides ">
+                    <img src="image/laptop6.jpg" style="width:100%; height:100%" alt=" "/>
+                </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+            </div>
+        </div>
+    </center>
+             <script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1;}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); 
+}
+</script>
+<div class="col-xs-offset-2 col-xs-8" style="border-right:thick solid #ff6666; border-width: 10px;; margin-top: 5%;">
+    <h2 style="font-family: 'Pacifico', cursive;display: inline-block;margin-bottom: 5px;color: #ff6666">About Us</h2>
+    <p style=" font-size: 18px;text-align: justify" >
+        Web Based Laptop recommendation system is a small project created by our team to basically to provide the user with the best set of laptops which are analysed based on the user preferences. 
+        It also enables the user to view the laptops and compare the laptops if they are confused so that they can buy the laptops accordingly.
+        As we all know that nowadays there are a lot of brands in the market and it is very hard to compare all the brands of laptops and to choose one which is the best suited for the user according to their needs as well as their price range. 
+        So our mission is to bring all the laptops available in a certain area and to help the user to choose the best one out of them.
+        </p>
+</div>
+
+        <div class="col-xs-offset-2 col-xs-8 box" >
+            <div><h2 style="font-family: 'Pacifico', cursive;display: inline-block;margin-bottom: 3%;color: #ff6666">Features</h2>
+            </div>
+            <center style="font-size: 20px;">
+        <div class="col-sm-4" style="height: 350px;">
+            <div class="thumbnail">
+            <img src="image/search.png" alt="SEARCH" style="width:100%;"/>
+            <div class="caption">
+                <p style="color:white">Search your laptop</p>
+            </div>
+            </div>
+        </div>
+            
+            <div class="col-sm-4">
+            <div class="thumbnail">
+            <img src="image/comp.png" alt="SEARCH" style="width:100%"/>
+            <div class="caption">
+                <p style="color:white">Compare 2 laptops</p>
+            </div>
+            </div>
+        </div>
+            <div class="col-sm-4">
+            <div class="thumbnail">
+            <img src="image/rec.png" alt="SEARCH" style="width:100%;"/>
+            <div class="caption">
+                <p style="color:white">Get recommendations</p>
+            </div>
+            </div>
+        </div>
+    </center>
+   </div>
+
+<div class="col-xs-offset-2 col-xs-8"  style="border-right:thick solid #ff6666; border-width: 10px;; margin-top: 5%;height: 300px;margin-bottom: 10%;">
+    <div><h2 style="font-family: 'Pacifico', cursive;display: inline-block;margin-bottom: 3%;color: #ff6666">Benefits</h2></div>
+            <ul style="color: white;font-size: 18px;">
+                <li>Easy to use</li>
+                <li>User friendly GUI</li>
+                <li>Saves time</li>
+                <li>Doesn't require much knowledge of laptops to recommend laptops to the user</li>
+                <li>Easy to compare laptops</li>
+                <li>24/7 service available</li>
+            </ul>
+    </div>
+
+    </body>
+</html>
